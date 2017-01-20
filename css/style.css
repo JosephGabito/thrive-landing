@@ -1,0 +1,121 @@
+@media (min-width: 1200px) {
+    .limiter {
+        width: 1172px;
+    }
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+img {
+    max-width: 100%;
+}
+.site-section {
+    padding: 125px 0;
+}
+.site-section-heading {
+    text-align: center;
+}
+.site-heading-text {
+    color: #2f353f;
+}
+.site-sub-heading-text {
+    color: #8f9ca7;
+    font-weight: bold;
+    font-size: 14px;
+}
+/**
+ * Header Section
+ **/
+#header-container {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    position: fixed;
+    z-index: 10;
+    background: transparent;
+    -webkit-transition: all 0.25s ease-in-out;
+       -moz-transition: all 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
+ }
+.site-header {
+    border-bottom: 1px solid #8f9ca7;
+    display: inline-block;
+}
+#header-container.sticky-header-active {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 1.5px 1px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.12);
+    position: fixed;
+}
+.sticky-header-active .site-header {
+    border-bottom-width: 0;
+    position: relative;
+}
+.sticky-header-active .site-logo-outer-wrap,
+.sticky-header-active .site-nav-menu-outer-wrap {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.site-logo-outer-wrap,
+.site-nav-menu-outer-wrap {
+    padding-top: 65px;
+    padding-bottom: 52px;
+    -webkit-transition: all 0.25s ease-in-out;
+       -moz-transition: all 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
+}
+.site-logo-outer-wrap {
+    text-align: left;
+}
+.site-nav-menu-wrap {
+    text-align: right;
+}
+/**
+ * Site Navigation Section
+ **/
+.site-nav-lists {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.site-nav-lists .site-nav-lists-item {
+    display: inline-block;
+}
+.site-nav-lists-item a {
+    color: #8f9ca7;
+    font-weight: 500;
+    padding: 0 40px;
+    text-decoration: none;
+}
+.site-nav-lists-item:first-of-type a {
+    padding-left: 0;
+}
+.site-nav-lists-item:last-of-type a {
+    padding-right: 0;
+}
+/**
+ * Site Slider Section
+ **/
+#site-slider-outer-wrap {
+    overflow: hidden;
+}
+#site-slider-wrap {
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.site-slider-image-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.site-slider-image-container img {
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+       -moz-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out;
+}
+.site-slider-image-container.active img {
+    opacity: 1;
+}
