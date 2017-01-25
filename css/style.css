@@ -6,6 +6,12 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+p {
+    color: #8f9ca7;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 300;
+}
 img {
     max-width: 100%;
 }
@@ -67,6 +73,12 @@ img {
 }
 .site-section-heading {
     text-align: center;
+}
+.site-section-caption-text {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 19px;
+    margin-bottom: 84px;
 }
 .site-heading-text,
 .site-sub-heading-text,
@@ -165,8 +177,15 @@ img {
             transition: all 0.5s ease-in-out;
 }
 .site-button:hover {
-    background-size: 150% 100%;
+    background-size: 180% 100%;
 }
+.site-section .site-button.type-gradient {
+}
+.site-section .site-button.type-gradient a {
+    background: transparent;
+    color: #fff;
+}
+
 .site-button a {
     color: #8f9ca7;
     background: #fff;
@@ -251,6 +270,90 @@ img {
 }
 .material-list.torch-red li:before {
     border-color: #FC0005;
+}
+.material-carousel-card-container .owl-item {
+    padding: 20px 0;
+}
+/* Carousel */
+.material-carousel-card-container {
+    position: relative;
+    overflow: hidden;
+}
+.material-carousel-card-container:before,
+.material-carousel-card-container:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100px;
+}
+.material-carousel-card-container:before {
+    left: -100px;
+    box-shadow: 100px 20px 200px #ffffff;
+}
+.material-carousel-card-container:after {
+    right: -100px;
+    box-shadow: -100px 20px 200px #ffffff;
+}
+.material-carousel-card-container.owl-theme .owl-dots .owl-dot span {
+    width: 14px;
+    height: 14px;
+    background: #8f9ca7;
+    -webkit-transition: all 0.25s ease-in-out;
+       -moz-transition: all 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
+}
+.material-carousel-card-container.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #137dff;
+}
+
+.material-carousel-card .site-section-content-item-inner{
+    background: #fff;
+    padding: 40px 44px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12), 0 3px 12px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    width: 577px;
+    min-height: 312px;
+}
+.site-section-content-header {
+    width: 100%;
+}
+.material-carousel-card .site-section-content-item-inner .site-carousel-avatar {
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    border-radius: 50%;
+}
+.site-carousel-info,
+.site-carousel-image {
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+}
+.site-carousel-info {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 0;
+}
+.site-carousel-image {
+    padding-right: 0;
+    text-align: right;
+    width: 24%;
+}
+.site-carousel-name {
+    color: #2f353f;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.material-carousel-card .site-section-content-item-inner .site-carousel-rating {
+    width: 100px;
+}
+.site-carousel-content {
+    margin-top: 25px;
+    padding: 0;
 }
 /**
  * Transparent
@@ -357,6 +460,9 @@ img {
     font-weight: 500;
     padding: 0 40px;
     text-decoration: none;
+}
+.site-nav-lists-item a.active {
+    color: #137dff;
 }
 .site-nav-lists-item:first-of-type a {
     padding-left: 0;
@@ -496,4 +602,59 @@ h1.slider-text-title {
         -ms-transform: translatey(0px);
             transform: translatey(0px);
     opacity: 1;
+}
+
+/**
+ * Footer Section
+ **/
+#footer-container {
+    width: 100%;
+    background: #fff;
+    padding: 0;
+}
+.site-footer {
+    color: #8f9ca7;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    margin: 0 auto;
+    padding: 59px 0 60px;
+}
+.site-footer * {
+    margin-bottom: 0;
+}
+.mock-ups {
+    position: relative;
+}
+.site-section-ipad-air,
+.site-section-iphone6 {
+    position: absolute;
+    z-index: 20;
+}
+.site-section-content-item .site-section-ipad-air {
+    width: 527px;
+    left: -210px;
+    bottom: -20px;
+}
+.site-section-content-item .site-section-imac {
+    width: 1258px;
+}
+.site-section-content-item .site-section-iphone6 {
+    width: 256px;
+    right: -85px;
+    bottom: -10px;
+}
+.product-price {
+    display: inline-block;
+    font-weight: bold;
+    margin: 0 5px;
+}
+.product-price.discount {
+    color: #44adff;
+    font-size: 48px;
+}
+.product-price.strike {
+    color: #2f353f;
+    font-size: 36px;
+    text-decoration: line-through;
 }
