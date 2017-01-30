@@ -1,7 +1,7 @@
 $(function () {
 
     var index = 0;
-    
+
     setTimeout(function(){
 
         $( '.slider-text-type-animate' ).typed({

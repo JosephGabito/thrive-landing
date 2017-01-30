@@ -29,11 +29,31 @@ $( document ).ready( function( $ ) {
                 items:1
             },
             768:{
-                items:2
+                items:5
             }
         }
     });
 
+    $('.waypoint').each(function() {
+
+        $(this).waypoint(function() {
+
+            if ( $(this.element).hasClass("active-cord") ) {
+
+                $(this.element).removeClass("active-cord");
+
+            } else {
+
+                $(this.element).addClass("active-cord");
+
+            }
+
+        }, {
+            offset: '25%'
+
+        });
+
+    });
 
     $( window ).scroll( function() {
 
@@ -58,9 +78,13 @@ $( document ).ready( function( $ ) {
 
             $(this).removeClass('active');
 
+            $('.site-nav-menu-outer-wrap').removeClass('active');
+
         } else {
 
             $(this).addClass('active');
+
+            $('.site-nav-menu-outer-wrap').addClass('active');
 
         }
 
