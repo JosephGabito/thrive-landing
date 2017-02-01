@@ -40,7 +40,7 @@ $( document ).ready( function( $ ) {
 
             if ( $(this.element).hasClass("active-cord") ) {
 
-                $(this.element).removeClass("active-cord");
+                $(this.element).removeClass("active-cord active");
 
             } else {
 
@@ -49,6 +49,7 @@ $( document ).ready( function( $ ) {
             }
 
         }, {
+
             offset: '25%'
 
         });
@@ -116,19 +117,40 @@ $( document ).ready( function( $ ) {
 
                 var target = $(this.hash);
 
+                var device_width = $( window ).width();
+
+                var scroll_location = '';
+
                 target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 
                 $( '.site-section').removeClass( 'active' );
 
                 if (target.length) {
 
+                    if ( ( device_width <= 1600 ) ) {
+
+                        scroll_location = target.offset().top - $( '#header-container' ).height();
+
+                    }
+
+                    if ( ( device_width <= 768 ) ) {
+
+                        scroll_location = target.offset().top;
+
+                    }
+
                     $('html,body').animate({
 
-                        scrollTop: target.offset().top - $( '#header-container' ).height()
+                        scrollTop: scroll_location
 
                     }, 500);
 
+
                     target.addClass( 'active' );
+
+                    if ( $( '#site-mobile-menu, .site-nav-menu-outer-wrap' ).hasClass('active') ) {
+                        $( '#site-mobile-menu, .site-nav-menu-outer-wrap' ).removeClass('active');
+                    }
 
                     return false;
 
