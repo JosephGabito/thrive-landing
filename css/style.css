@@ -997,3 +997,10 @@ span#suggested {
             transform: rotate(-45deg);
     top: -10.5px;
 }
+
+#review-link {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #8f9ca7;
+}

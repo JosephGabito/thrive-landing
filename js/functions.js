@@ -15,7 +15,7 @@ $(function () {
             loop: true,
             backDelay: 3000,
             onStringTyped: function(){
-               // __animate_slider()
+              // __animate_slider()
             }
         });
     }, 3000);
