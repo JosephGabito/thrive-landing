@@ -1,14 +1,11 @@
-@media (min-width: 1200px) {
-    .limiter {
-        width: 1172px;
-    }
-}
+
 html,
 body {
     overflow-x: hidden;
 }
 body {
     font-family: 'Roboto', sans-serif;
+    background: #dadada;
 }
 a {
     -webkit-transition: color 0.25s ease-in-out;
@@ -18,11 +15,22 @@ a {
 p {
     color: #8f9ca7;
     font-size: 16px;
-    line-height: 21px;
     font-weight: 300;
 }
 img {
     max-width: 100%;
+}
+.new-line {
+    clear: both;
+    display: block;
+}
+.rarr {
+    font-family: sans-serif;
+}
+#site.site-wrapper {
+    max-width: 1600px;
+    background: #fff;
+    margin: 0 auto;
 }
 .site-section {
     padding: 120px 0;
@@ -120,7 +128,7 @@ img {
 }
 .site-caption-text {
     font-size: 14px;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 19px;
     margin-bottom: 95px;
 }
@@ -134,9 +142,8 @@ img {
 }
 
 .site-section-content.column-3 .site-section-content-item {
-    width: 33.33%;
+    width: 33%;
     padding: 0 32.5px;
-    display: inline-block;
     float: left;
 }
 .site-section-content-item img {
@@ -144,9 +151,11 @@ img {
 }
 
 .site-section-content-item .content-image {
-    width: 132px;
+    width: 100px;
     display: block;
     margin: 0 auto 45px;
+    box-shadow: 0px 2px 10px 0px #b9b9b9;
+    border-radius: 20px;
 }
 .content-item-title {
     color: #8f9ca7;
@@ -227,7 +236,7 @@ img {
 }
 .material-list li {
     color: #8f9ca7;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 28px;
     font-weight: 300;
     padding-left: 20px;
@@ -402,7 +411,7 @@ img {
 }
 .transparent-list li {
     color: #8f9ca7;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 33px;
     font-weight: 300;
     text-align: center;
@@ -415,6 +424,7 @@ img {
     padding: 0;
     text-align: center;
     position: fixed;
+    left: 0;
     z-index: 500;
     background: transparent;
     -webkit-transition: all 0.25s ease-in-out;
@@ -446,13 +456,13 @@ img {
 }
 @media (min-width: 1200px) {
     .site-nav-wrap.container {
-        width: 100%;
+       /* width: 100%; */
     }
 }
 .site-logo-outer-wrap,
 .site-nav-menu-outer-wrap {
-    padding-top: 65px;
-    padding-bottom: 52px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     -webkit-transition: all 0.25s ease-in-out;
        -moz-transition: all 0.25s ease-in-out;
             transition: all 0.25s ease-in-out;
@@ -476,9 +486,9 @@ img {
 }
 .site-nav-lists-item a {
     color: #8f9ca7;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
-    padding: 0 40px;
+    padding: 0 28px;
     text-decoration: none;
 }
 .site-nav-lists-item a:hover,
@@ -497,6 +507,7 @@ img {
 #site-slider-outer-wrap {
     overflow: hidden;
     max-height: 962px;
+    position: relative;
 }
 #site-slider-wrap {
     width: 100%;
@@ -553,39 +564,39 @@ img {
     display: table-cell;
     vertical-align: middle;
 }
+.slider-text-wrap {
+    margin-top: 40px;
+}
 .slider-text-title {
-    font-size: 48px;
+    font-size: 32px;
     font-weight: bold;
-    line-height: 70px;
+    line-height: 0.65em;
     margin-bottom: 30px;
 }
-.slider-text-title p {
-    font-size: 48px;
-    font-weight: bold;
-    line-height: 70px;
-    margin-bottom: 0;
-}
+
 .slider-text-inner-wrap .sub-heading {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 .slider-text-inner-wrap .emphasize-large {
-    font-size: 24px;
-    font-weight: 900;
-    margin-bottom: 25px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 800;
 }
 .slider-text-inner-wrap .emphasize-small {
-    font-size: 20px;
-    font-weight: 900;
+    font-size: 16px;
+    font-weight: 800;
 }
 .slider-caption-wrap {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.slider-caption-wrap p {
+    max-width: 485px;
+    font-size: 14px;
 }
 .slider-text-inner-wrap p {
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: 500;
     margin-bottom: 0;
 }
 /**
@@ -721,10 +732,9 @@ img {
     }
 }
 @media(max-width: 992px) {
-    h1.slider-text-title,
-    h1.slider-text-title p {
+    h1.slider-text-title {
         font-size: 34px;
-        line-height: 56px;
+        line-height: 0.65em;
     }
     .slider-text-inner-wrap .emphasize-large,
     .slider-text-inner-wrap .sub-heading {
@@ -894,10 +904,9 @@ img {
     }
 }
 @media(max-width: 480px) {
-    h1.slider-text-title,
-    h1.slider-text-title p {
+    h1.slider-text-title {
         font-size: 24px;
-        line-height: 46px;
+        line-height: 0.65em;
     }
 }
 .site-mobile-menu {

@@ -1,6 +1,6 @@
 $( document ).ready( function( $ ) {
     "use strict";
-
+    
     var wow = new WOW({
         animateClass: 'animated',
         offset:       150,
