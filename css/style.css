@@ -135,7 +135,7 @@ strong {
     line-height: 24px;
     margin: 0 auto;
     margin-bottom: 65px;
-    width: 672px;
+    max-width: 672px;
 }
 span#suggested {
     position: absolute;
@@ -611,6 +611,15 @@ span#suggested {
     font-weight: bold;
     line-height: 0.65em;
     margin-bottom: 30px;
+    color: #137dff!important;
+}
+@media (max-width: 768px) {
+    .slider-text-title {
+        line-height: 1.3em;
+    }
+    .hidden-xs {
+        display: none;
+    }
 }
 
 .slider-text-inner-wrap .sub-heading {
