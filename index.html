@@ -39,6 +39,25 @@
     <script src="js/jquery.waypoints.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/script.js"></script>
+
+    <!--Facebook Pixel-->
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2240259419532690'); // Insert your pixel ID here.
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2240259419532690&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+
+    <!--End Facebook Pixel-->
     <title>
         Effortless WordPress Intranet, Extranet, and Community Theme
     </title>
@@ -976,7 +995,7 @@
                         <h4 class="site-section-caption-text wow fadeInDown" data-wow-duration="0.5s">Thrive is available for only $67.00 One-Time Fee and its yours forever</h4>
 
                         <div class="site-button type-gradient wow fadeInDown" data-wow-duration="1s">
-                            <a target="_blank" href="https://themeforest.net/cart/configure_before_adding/12275020?license=regular&size=source&support=bundle_6month&ref=dunhakdis" title="Click to Download Thrive">Download Thrive</a>
+                            <a id="js-init-checkout" target="_blank" href="https://themeforest.net/cart/configure_before_adding/12275020?license=regular&size=source&support=bundle_6month&ref=dunhakdis" title="Click to Download Thrive">Download Thrive</a>
                         </div>
                     </div>
 
@@ -1001,5 +1020,32 @@
   ga('send', 'pageview');
 
 </script>
+<!--Facebook Pixel: Track Download Thrive Button-->
+<script>
+(function(){
+// 1.0 Track download button click
+var initCheckoutButton = document.getElementById('js-init-checkout');
+    initCheckoutButton.addEventListener('click', function(e){
+        e.preventDefault();
+        fbq('track', 'InitiateCheckout');
+    });
+// 2.0 Track FB Ads Referal Link
+// @https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+var fbAdsReferal = getParameterByName('fb__sponsored_post');
+if ( 'yes' === fbAdsReferal ) {
+    fbq('track','Lead');
+}
+})();
+</script>
+<!--END Facebook Pixel: Track Download Thrive Button-->
 </body>
 </html>
