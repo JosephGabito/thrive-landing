@@ -1026,7 +1026,6 @@
 // 1.0 Track download button click
 var initCheckoutButton = document.getElementById('js-init-checkout');
     initCheckoutButton.addEventListener('click', function(e){
-        e.preventDefault();
         fbq('track', 'InitiateCheckout');
     });
 // 2.0 Track FB Ads Referal Link
