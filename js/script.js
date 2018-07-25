@@ -1,3 +1,8 @@
+
+if (window.top != window.self) {
+    window.top.location.href = "http://thrive.dunhakdis.com/preview";
+}
+
 $( document ).ready( function( $ ) {
     "use strict";
     
@@ -94,6 +99,8 @@ $( document ).ready( function( $ ) {
     $(function() {
 
         $('.site-nav-lists li a').on('click', function(e) {
+
+            if ( $(this).attr('id') == 'buy-button' ) { return; }
 
             $( '.site-nav-lists li a' ).removeClass('active');
 
