@@ -1,8 +1,4 @@
 
-if (window.top != window.self) {
-    window.top.location.href = "http://thrive.dunhakdis.com/preview";
-}
-
 $( document ).ready( function( $ ) {
     "use strict";
     
