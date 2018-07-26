@@ -444,7 +444,8 @@ span.suggested {
     text-align: center;
 }
 .site-logo {
-
+    position: relative;
+    top: -5px;
 }
 /**
  * Header Section
@@ -469,7 +470,6 @@ span.suggested {
     background: linear-gradient(to right, #3F51B5, #0998a5);
     box-shadow: 0 1.5px 1px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.12);
     position: fixed;
-    margin-top: -45px;
 }
 .sticky-header-active .site-header {
     border-bottom-width: 0;
@@ -477,8 +477,7 @@ span.suggested {
 }
 .sticky-header-active .site-logo-outer-wrap,
 .sticky-header-active .site-nav-menu-outer-wrap {
-    padding-top: 24px;
-    padding-bottom: 26px;
+    padding: 30px 0 20px
 }
 .site-nav-wrap.container {
     padding: 0;
@@ -492,7 +491,7 @@ span.suggested {
 .site-logo-outer-wrap,
 .site-nav-menu-outer-wrap {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     -webkit-transition: all 0.25s ease-in-out;
        -moz-transition: all 0.25s ease-in-out;
             transition: all 0.25s ease-in-out;
@@ -518,7 +517,7 @@ span.suggested {
     color: #fff;
     font-size: 16px;
     font-weight: 300;
-    padding: 0 28px;
+    padding: 0 20px;
     text-decoration: none;
 }
 .site-nav-lists-item a:hover,
@@ -545,7 +544,7 @@ span.suggested {
     position: absolute;
     width: 100%;
     height: 100%;
-   
+    background: #101010ab;   
     z-index: 40;
 }
 #site-slider-wrap {
@@ -621,7 +620,7 @@ span.suggested {
     font-size: 32px;
     font-weight: bold;
     line-height: 0.65em;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     color: #fff!important;
     text-shadow: 0px 2px 7px  #444;
 }
@@ -651,12 +650,13 @@ span.suggested {
     font-weight: 600;
 }
 .slider-caption-wrap {
-    margin-bottom: 10px;
+    margin-bottom: 35px;
     font-weight: 600;
 }
 .slider-caption-wrap p {
     max-width: 520px;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 300;
 }
 .slider-text-inner-wrap p {
     margin-bottom: 0;
@@ -829,8 +829,8 @@ span.suggested {
         max-width: 100%;
         flex: inherit;
         text-align: center;
-        padding-top: 24px;
-        padding-bottom: 26px;
+        padding-top: 25px;
+        padding-bottom: 15px;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -991,7 +991,7 @@ span.suggested {
     display: inline-block;
     height: 5px;
     width: 100%;
-    border: 1px solid #44adff;
+    border: 1px solid #fff;
     margin: 0;
     float: left;
     border-radius: 2px;
@@ -1033,34 +1033,33 @@ span.suggested {
 }
 
 .slider-text-inner-wrap {
-    padding: 15px 25px;
-    background: #000000ab;
+    
     color: #fff;
 
 }
-#buy-button {
+.site-nav-lists-item a.buy-button,
+.slider-text-container a.buy-button {
     padding: 10px 20px;
     border-radius: 4px;
     font-size: 15px;
     font-weight: 500;
     box-shadow: 0 2px 0 #6f9a37;
     background: #81B43D;
-}
-.envato-back {
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
-}
-.envato-back a {
-    color: #eee;
+    font-weight: 600;
 }
 
-.envato-back a:hover {
+.site-nav-lists-item a.buy-button:active,
+.site-nav-lists-item a.buy-button:focus,
+.site-nav-lists-item a.buy-button:active,
+.slider-text-container a.buy-button:active,
+.slider-text-container a.buy-button:focus,
+.slider-text-container a.buy-button:hover {
     text-decoration: none;
-    color: #fff;
+    background: #8dd232;
 }
+
 #demos {
-background-image: url(../images/demo-bg.png);
-    background-size: 70%;
+    background-image: url(../images/demo-bg.png?x=x);
+    background-size: 500px;
     background-repeat: repeat;
 }
