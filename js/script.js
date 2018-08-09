@@ -96,7 +96,7 @@ $( document ).ready( function( $ ) {
 
         $('.site-nav-lists li a').on('click', function(e) {
 
-            if ( $(this).attr('id') == 'buy-button' ) { return; }
+            if ( $(this).attr('class') == 'buy-button' ) { return; }
 
             $( '.site-nav-lists li a' ).removeClass('active');
 
